@@ -3,14 +3,18 @@ export { ArgonType } from "argon2-browser";
 
 export function hash(options) {
   return new Promise((resolve, reject) => {
-    const worker = new Worker();
-    worker.onmessage = (event) => {
-      if (event.error) {
-        reject(event.error);
-      } else {
-        resolve(event.data.data);
+    try {
+      const worker = new Worker();
+      worker.onmessage = (event) => {
+        if (event.error) {
+          reject(event.error);
+        } else {
+          resolve(event.data.data);
+        }
       }
+      worker.postMessage(options);
+    } catch (e) {
+      reject(e);
     }
-    worker.postMessage(options);
   });
 };

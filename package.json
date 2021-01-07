@@ -1,6 +1,6 @@
 {
   "name": "argon2-webworker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A web worker wrapper for argon2-browser to easily use it from a web worker",
   "main": "dist/argon2-webworker.js",
   "types": "src/argon2-webworker.d.ts",

@@ -1,0 +1,35 @@
+{
+  "name": "argon2-webworker",
+  "version": "0.1.0",
+  "description": "A web worker wrapper for argon2-browser to easily use it from a web worker",
+  "main": "dist/argon2-webworker.js",
+  "types": "argon2-webworker.d.ts",
+  "files": [
+    "dist/*",
+    "argon2-webworker.d.ts"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn lint"
+  },
+  "dependencies": {
+    "argon2-browser": "^1.15.3"
+  },
+  "devDependencies": {
+    "base64-loader": "^1.0.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "worker-loader": "^3.0.7"
+  },
+  "keywords": [
+    "cryptography",
+    "argon2",
+    "libsodium",
+    "web worker"
+  ],
+  "author": "Tom Hacohen <tom@stosb.com> (https://stosb.com)",
+  "repository": "https://www.github.com/etesync/etesync-js",
+  "license": "BSD-3-Clause"
+}

@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./main.js",
+  entry: "./src/main.js",
   module: {
     noParse: /\.wasm$/,
     rules: [

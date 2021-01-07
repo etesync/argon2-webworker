@@ -3,16 +3,14 @@
   "version": "0.1.0",
   "description": "A web worker wrapper for argon2-browser to easily use it from a web worker",
   "main": "dist/argon2-webworker.js",
-  "types": "argon2-webworker.d.ts",
+  "types": "src/argon2-webworker.d.ts",
   "files": [
     "dist/*",
-    "argon2-webworker.d.ts"
+    "src/argon2-webworker.d.ts"
   ],
   "scripts": {
     "build": "webpack",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
-    "prepare": "yarn build",
-    "prepublishOnly": "yarn lint"
+    "prepare": "yarn build"
   },
   "dependencies": {
     "argon2-browser": "^1.15.3"
